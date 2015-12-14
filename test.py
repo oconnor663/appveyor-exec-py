@@ -12,4 +12,3 @@ subprocess.call(second, shell=True)
 print("doing it again and capturing output")
 out = subprocess.check_output(second, shell=True).decode()
 print("here's the output:", repr(out))
-assert os.environ['PYTHON'] in out, "look for the PYTHON path in there"
