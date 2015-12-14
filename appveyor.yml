@@ -1,32 +1,23 @@
-environment:
-  matrix:
-    - PYTHON: "C:\\Python34"
-      PYTHON_VERSION: "3.4.x" # currently 3.4.3
-      PYTHON_ARCH: "32"
-
-install:
-  # Prepend newly installed Python to the PATH of this build (this cannot be
-  # done from inside the powershell script as it would require to restart
-  # the parent CMD process).
-  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
-
-  # Check that we have the expected version and architecture for Python
-  - "python --version"
-  - "python -c \"import struct; print(struct.calcsize('P') * 8)\""
-
-build_script:
-  # Build the compiled extension
-  - "echo NO-OP"
+# environment:
+#   matrix:
+#     - PYTHON: "C:\\Python34"
+#       PYTHON_VERSION: "3.4.x" # currently 3.4.3
+#       PYTHON_ARCH: "32"
+# 
+# install:
+#   # Prepend newly installed Python to the PATH of this build (this cannot be
+#   # done from inside the powershell script as it would require to restart
+#   # the parent CMD process).
+#   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+# 
+#   # Check that we have the expected version and architecture for Python
+#   - "python --version"
+#   - "python -c \"import struct; print(struct.calcsize('P') * 8)\""
+# 
+# build_script:
+#   # Build the compiled extension
+#   - "echo NO-OP"
 
 test_script:
   # Run the project tests
-  - 'where python.exe'
-  - 'reg query HKEY_CLASSES_ROOT\Python.File\shell\open\command'
-  - 'reg query HKEY_CLASSES_ROOT\Python.CompiledFile\shell\open\command'
-  - example.bat
-  - 'ftype Python.CompiledFile="%PYTHON%\python.exe" "%%%%1" %%%%*'
-  - 'ftype Python.File="%PYTHON%\python.exe" "%%%%1" %%%%*'
-  - 'ftype Python.NoConFile="%PYTHON%\pythonw.exe" "%%%%1" %%%%*'
-  - 'reg query HKEY_CLASSES_ROOT\Python.File\shell\open\command'
-  - 'reg query HKEY_CLASSES_ROOT\Python.CompiledFile\shell\open\command'
-  - example.bat
+  - hello.py
