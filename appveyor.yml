@@ -20,7 +20,8 @@ build_script:
 
 test_script:
   # Run the project tests
+  - example.bat
   - 'ftype Python.CompiledFile="%PYTHON%\python.exe" "%%%%1" %%%%*'
   - 'ftype Python.File="%PYTHON%\python.exe" "%%%%1" %%%%*'
   - 'ftype Python.NoConFile="%PYTHON%\pythonw.exe" "%%%%1" %%%%*'
-  - "%CMD_IN_ENV% python test.py"
+  - example.bat
