@@ -20,8 +20,12 @@ build_script:
 
 test_script:
   # Run the project tests
+  - 'reg query HKEY_CLASSES_ROOT\Python.File\shell\open\command'
+  - 'reg query HKEY_CLASSES_ROOT\Python.CompiledFile\shell\open\command'
   - example.bat
   - 'ftype Python.CompiledFile="%PYTHON%\python.exe" "%%%%1" %%%%*'
   - 'ftype Python.File="%PYTHON%\python.exe" "%%%%1" %%%%*'
   - 'ftype Python.NoConFile="%PYTHON%\pythonw.exe" "%%%%1" %%%%*'
+  - 'reg query HKEY_CLASSES_ROOT\Python.File\shell\open\command'
+  - 'reg query HKEY_CLASSES_ROOT\Python.CompiledFile\shell\open\command'
   - example.bat
