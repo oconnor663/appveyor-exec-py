@@ -3,7 +3,8 @@ os: Visual Studio 2015
 build: off
 
 test_script:
-  # Run the project tests
+  - echo "try deleting this reg key"
+  - reg delete HKEY_CLASSES_ROOT\.py\OpenWithProgids
   - hello.py
   - echo "no output above :(  but it works when we explicitly use python below!"
   - python hello.py
