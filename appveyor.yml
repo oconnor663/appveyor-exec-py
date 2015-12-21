@@ -4,7 +4,7 @@ build: off
 
 test_script:
   - echo "try deleting this reg key"
-  - reg delete HKEY_CLASSES_ROOT\.py\OpenWithProgids
+  - reg delete HKEY_CLASSES_ROOT\.py\OpenWithProgids /f
   - hello.py
   - echo "no output above :(  but it works when we explicitly use python below!"
   - python hello.py
