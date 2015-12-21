@@ -3,8 +3,10 @@ os: Visual Studio 2015
 build: off
 
 test_script:
+  - echo "does this work right off the bat?"
+  - hello.py
   - echo "try deleting this reg key"
   - reg delete HKEY_CLASSES_ROOT\.py\OpenWithProgids /f
   - hello.py
-  - echo "no output above :(  but it works when we explicitly use python below!"
+  - echo "and compare to executing with the explicit interpreter"
   - python hello.py
