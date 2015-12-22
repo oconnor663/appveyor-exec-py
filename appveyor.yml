@@ -2,33 +2,43 @@ environment:
   matrix:
     - PYTHON: "C:\\Python26"
       PY_PYTHON: 2.6-32
+      PY_PYTHON2: 2.6-32
 
     - PYTHON: "C:\\Python26-x64"
       PY_PYTHON: 2.6
+      PY_PYTHON2: 2.6
 
     - PYTHON: "C:\\Python27"
       PY_PYTHON: 2.7-32
+      PY_PYTHON2: 2.7-32
 
     - PYTHON: "C:\\Python27-x64"
       PY_PYTHON: 2.7
+      PY_PYTHON2: 2.7
 
     - PYTHON: "C:\\Python33"
       PY_PYTHON: 3.3-32
+      PY_PYTHON3: 3.3-32
 
     - PYTHON: "C:\\Python33-x64"
       PY_PYTHON: 3.3
+      PY_PYTHON3: 3.3
 
     - PYTHON: "C:\\Python34"
       PY_PYTHON: 3.4-32
+      PY_PYTHON3: 3.4-32
 
     - PYTHON: "C:\\Python34-x64"
       PY_PYTHON: 3.4
+      PY_PYTHON3: 3.4
 
     - PYTHON: "C:\\Python35"
       PY_PYTHON: 3.5-32
+      PY_PYTHON3: 3.5-32
 
     - PYTHON: "C:\\Python35-x64"
       PY_PYTHON: 3.5
+      PY_PYTHON3: 3.5
 
 install:
   # Prepend newly installed Python to the PATH of this build (this cannot be
@@ -47,10 +57,7 @@ install:
 build: off
 
 test_script:
-  - echo "does this work right off the bat?"
   - hello.py
-  - echo "try deleting this reg key"
-  - reg delete HKEY_CLASSES_ROOT\.py\OpenWithProgids /f
-  - hello.py
-  - echo "and compare to executing with the explicit interpreter"
   - python hello.py
+  - hello3.py
+  - python hello3.py
