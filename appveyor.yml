@@ -27,6 +27,9 @@ environment:
 build: off
 
 test_script:
+  # From http://help.appveyor.com/discussions/problems/2569-latest-appveyor-build-platform-update-introduced-a-python-problem#comment_38756340
+  - ps: cmd /c ftype Python.File="C:\Windows\py.exe" "%1" %*
+  - ftype Python.File
   - echo "does this work right off the bat?"
   - hello.py
   - echo "try deleting this reg key"
