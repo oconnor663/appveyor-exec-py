@@ -1,4 +1,8 @@
-os: Visual Studio 2015
+environment:
+  matrix:
+    - PYTHON: "C:\\Python35"
+      PYTHON_VERSION: "3.5.x"
+      PYTHON_ARCH: "32"
 
 build: off
 
