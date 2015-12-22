@@ -50,6 +50,8 @@ install:
   - "python --version"
   - "python -c \"import struct; print(struct.calcsize('P') * 8)\""
 
+  - pip install wheel
+
   # From http://help.appveyor.com/discussions/problems/2569-latest-appveyor-build-platform-update-introduced-a-python-problem#comment_38756340
   - ps: cmd /c ftype Python.File="C:\Windows\py.exe" "%1" %*
   - ftype Python.File
