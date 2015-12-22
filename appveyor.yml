@@ -1,28 +1,34 @@
 environment:
   matrix:
+    - PYTHON: "C:\\Python26"
+      PY_PYTHON: 2.6-32
+
+    - PYTHON: "C:\\Python26-x64"
+      PY_PYTHON: 2.6
+
+    - PYTHON: "C:\\Python27"
+      PY_PYTHON: 2.7-32
+
+    - PYTHON: "C:\\Python27-x64"
+      PY_PYTHON: 2.7
+
     - PYTHON: "C:\\Python33"
-      PYTHON_VERSION: "3.3.x" # currently 3.3.5
-      PYTHON_ARCH: "32"
+      PY_PYTHON: 3.3-32
 
     - PYTHON: "C:\\Python33-x64"
-      PYTHON_VERSION: "3.3.x" # currently 3.3.5
-      PYTHON_ARCH: "64"
+      PY_PYTHON: 3.3
 
     - PYTHON: "C:\\Python34"
-      PYTHON_VERSION: "3.4.x" # currently 3.4.3
-      PYTHON_ARCH: "32"
+      PY_PYTHON: 3.4-32
 
     - PYTHON: "C:\\Python34-x64"
-      PYTHON_VERSION: "3.4.x" # currently 3.4.3
-      PYTHON_ARCH: "64"
+      PY_PYTHON: 3.4
 
     - PYTHON: "C:\\Python35"
-      PYTHON_VERSION: "3.5.x" # currently 3.5.0
-      PYTHON_ARCH: "32"
+      PY_PYTHON: 3.5-32
 
     - PYTHON: "C:\\Python35-x64"
-      PYTHON_VERSION: "3.5.x" # currently 3.5.0
-      PYTHON_ARCH: "64"
+      PY_PYTHON: 3.5
 
 install:
   # Prepend newly installed Python to the PATH of this build (this cannot be

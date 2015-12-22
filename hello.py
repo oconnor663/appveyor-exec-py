@@ -1,7 +1,8 @@
 #! /usr/bin/env python3
 
+# We set PY_PYTHON, so the above shebang should actually be ignored. (Make sure
+# the Python 2 run actually uses Python 2.)
+
 import sys
 
-# We deliberately use Python-3-only print flags, to make sure we're running
-# under Python 3.
-print("OH MY GOSH ITS WORKING", sys.version, file=sys.stderr)
+print("OH MY GOSH ITS WORKING", sys.version)
