@@ -60,4 +60,4 @@ test_script:
   - hello.py
   - python hello.py
   - hello3.py
-  - python hello3.py
+  - python3 hello3.py
