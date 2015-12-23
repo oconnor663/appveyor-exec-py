@@ -15,7 +15,7 @@ install:
 build: off
 
 test_script:
-  - C:\Python43\python hello.py
+  - C:\Python34\python hello.py
   - py -3.4-32 hello.py
   - C:\Python35\python hello.py
   - py -3.5-32 hello.py
