@@ -3,6 +3,8 @@ environment:
     - PYTHON: "C:\\Python35"
       PY_PYTHON: 3.5-32
       PY_PYTHON3: 3.5-32
+      PYTHON_VERSION: "3.5.0"
+      PYTHON_ARCH: "32"
 
 install:
   # Prepend newly installed Python to the PATH of this build (this cannot be
