@@ -1,9 +1,3 @@
-environment:
-  matrix:
-    - PYTHON: "C:\\Python35"
-      PYTHON_VERSION: "3.5.0"
-      PYTHON_ARCH: "32"
-
 install:
   # Prepend newly installed Python to the PATH of this build (this cannot be
   # done from inside the powershell script as it would require to restart
@@ -22,8 +16,8 @@ build: off
 
 test_script:
   - hello.py
-  - python hello.py
-  - hello3.py
-  - py -3 hello3.py
+  - py hello.py
+  - py -3 hello.py
+  - py -3.5 hello.py
+  - C:\Python35\python hello.py
   - py -3.5-32 hello.py
-  - py -3.5-32 hello3.py
