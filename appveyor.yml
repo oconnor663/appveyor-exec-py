@@ -15,11 +15,15 @@ install:
 build: off
 
 test_script:
-  - echo Python 3.4 32-bit with an explicit interpreter.
+  - : Python 3.4 32-bit with an explicit interpreter.
   - C:\Python34\python hello.py
-  - echo Python 3.4 32-bit with the launcher.
+  - : Python 3.4 32-bit with the launcher.
   - py -3.4-32 hello.py
-  - echo Python 3.5 32-bit with an explicit interpreter.
+  - : Python 3.5 64-bit with an explicit interpreter.
+  - C:\Python35-64\python hello.py
+  - : Python 3.5 64-bit with the launcher.
+  - py -3.5 hello.py
+  - : Python 3.5 32-bit with an explicit interpreter.
   - C:\Python35\python hello.py
-  - echo Python 3.5 32-bit with the launcher. THIS IS GOING TO FAIL!
+  - : Python 3.5 32-bit with the launcher. THIS ONE IS GOING TO FAIL!
   - py -3.5-32 hello.py
