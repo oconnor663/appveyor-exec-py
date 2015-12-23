@@ -25,4 +25,5 @@ test_script:
   - python hello.py
   - hello3.py
   - py -3 hello3.py
+  - py -3.5-32 hello.py
   - py -3.5-32 hello3.py
