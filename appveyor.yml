@@ -12,6 +12,9 @@ install:
   - ps: cmd /c ftype Python.File="C:\Windows\py.exe" "%1" %*
   - ftype Python.File
 
+  # Try the fix from https://github.com/camlorn/libaudioverse/commit/2a0aaa1c250e53b1f0b2cb3da30cdfb959548d8a
+  - 'c:\python35\python -m pip install -U setuptools sphinx pypandoc'
+
 build: off
 
 test_script:
